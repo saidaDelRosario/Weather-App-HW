@@ -1,0 +1,128 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  max-width: 400px;
+}
+
+h1 {
+  position: relative;
+  left: 310px;
+  top: -40px;
+}
+
+h2 {
+  position: relative;
+  left: 740px;
+  top: -220px;
+}
+
+.citySearch {
+  position: relative;
+  left: 250px;
+  top: 30px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.date {
+  margin-top: 35px;
+  font-size: 14px;
+}
+
+.cityName {
+  font-size: 50px;
+}
+
+.currentTemp {
+  font-size: 120px;
+  color: #0dcaf0;
+  font-weight: bold;
+}
+.currentWeather {
+  font-size: 17px;
+  margin-bottom: 70px;
+}
+.units {
+  font-size: 25px;
+  font-weight: lighter;
+  position: relative;
+  top: -30px;
+}
+.weekWeather {
+  font-size: medium;
+}
+.pageBackground {
+  background: linear-gradient(
+    181.2deg,
+    rgb(181, 239, 249) 10.5%,
+    rgb(254, 254, 254) 86.8%
+  );
+
+  padding-bottom: 110px;
+}
+.fri {
+  margin-left: 265px;
+  margin-top: -190px;
+}
+
+.sat {
+  margin-left: 120px;
+  margin-top: -200px;
+}
+
+.sun {
+  margin-left: 240px;
+  margin-top: -200px;
+}
+
+.mon {
+  margin-left: 360px;
+  margin-top: -200px;
+}
+
+.tue {
+  margin-left: 480px;
+  margin-top: -200px;
+}
+
+.wed {
+  margin-left: 600px;
+  margin-top: -200px;
+}
+
+.searchButton {
+  position: relative;
+  background-color: #0dcaf0;
+  border-radius: 10px;
+  width: 155px;
+  height: 35px;
+  border: 0;
+  margin-left: 368px;
+  top: -35px;
+}
+
+.currentCityButton {
+  background-color: #0dcaf0;
+  border-radius: 10px;
+  width: 155px;
+  height: 35px;
+  border: 0;
+  position: relative;
+  left: 800px;
+  top: -40px;
+}
+
+.cityInput {
+  border-radius: 10px;
+  width: 355px;
+  height: 35px;
+  border: 0;
+}
+a:focus {
+  text-decoration: none;
+  font-weight: border;
+  color: #0dcaf0;
+}
+
+a {
+  color: black;
+}
