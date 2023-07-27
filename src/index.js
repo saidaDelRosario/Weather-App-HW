@@ -50,6 +50,12 @@ function showCity(event) {
 
     document.querySelector("#weather-description").innerHTML =
       response.data.weather[0].description.toUpperCase();
+
+    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+
+    document.querySelector("#wind").innerHTML = Math.round(
+      response.data.wind.speed
+    );
   }
 
   axios.get(apiUrl).then(showCityTemp);
