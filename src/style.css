@@ -12,7 +12,15 @@ h1 {
 h2 {
   position: relative;
   left: 740px;
-  top: -220px;
+  top: -290px;
+}
+
+.conditions {
+  list-style: none;
+  font-size: 10px;
+  position: relative;
+  left: 855px;
+  top: -165px;
 }
 
 .citySearch {
