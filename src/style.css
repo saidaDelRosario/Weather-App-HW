@@ -15,8 +15,11 @@ h2 {
   top: -265px;
 }
 
-.conditions {
+ul {
   list-style: none;
+}
+
+.conditions {
   font-size: 12px;
   position: relative;
   left: 855px;
