@@ -90,7 +90,7 @@ citySearch.addEventListener("submit", showCity);
 
 function showCurrentCity() {
   function showCityTemp(response) {
-    //console.log(response.data.main.temp);
+    console.log(response.data.main.temp);
     let currentCityTemp = Math.round(response.data.main.temp);
 
     let currentCityName = response.data.name.toUpperCase();
@@ -116,8 +116,8 @@ function showCurrentCity() {
 
     console.log(lon);
 
-    let apiKey = "4f97a6af475a359f35870845c4249adb";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+    let apiKey = "ec23e2ff6f0483966bf50ed682b76bdd";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${ec23e2ff6f0483966bf50ed682b76bdd}&units=imperial`;
 
     axios.get(apiUrl).then(showCityTemp);
   }
