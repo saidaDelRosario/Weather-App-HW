@@ -11,8 +11,8 @@ h1 {
 
 h2 {
   position: relative;
-  left: 730px;
-  top: -265px;
+  left: 690px;
+  top: -235px;
 }
 
 ul {
@@ -21,9 +21,6 @@ ul {
 
 .conditions {
   font-size: 12px;
-  position: relative;
-  left: 840px;
-  top: -150px;
 }
 
 .citySearch {
@@ -56,7 +53,7 @@ ul {
   font-size: 25px;
   font-weight: lighter;
   position: relative;
-  top: -65px;
+  top: -64px;
 }
 .weekWeather {
   font-size: medium;
@@ -73,7 +70,7 @@ ul {
 
 .fri {
   margin-left: 265px;
-  margin-top: -260px;
+  margin-top: -240px;
 }
 
 .sat {
