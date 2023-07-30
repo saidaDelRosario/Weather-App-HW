@@ -19,10 +19,6 @@ ul {
   list-style: none;
 }
 
-.conditions {
-  font-size: 12px;
-}
-
 .citySearch {
   position: relative;
   left: 250px;
@@ -46,7 +42,7 @@ ul {
   font-weight: bold;
 }
 .currentWeather {
-  font-size: 17px;
+  font-size: 15px;
   margin-bottom: 70px;
 }
 .units {
@@ -54,6 +50,7 @@ ul {
   font-weight: lighter;
   position: relative;
   top: -64px;
+  left: -13px;
 }
 .weekWeather {
   font-size: medium;
@@ -70,7 +67,7 @@ ul {
 
 .fri {
   margin-left: 265px;
-  margin-top: -240px;
+  margin-top: -220px;
 }
 
 .sat {

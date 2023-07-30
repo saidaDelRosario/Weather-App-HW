@@ -51,7 +51,8 @@ function showCity(event) {
     FahrenheitTemp = Math.round(response.data.main.temp);
 
     document.querySelector("#weather-description").innerHTML =
-      response.data.weather[0].description.toUpperCase();
+      response.data.weather[0].description.charAt(0).toUpperCase() +
+      str.slice(1);
 
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 
@@ -74,7 +75,8 @@ function showCurrentCity() {
     let currentCityTemp = Math.round(response.data.main.temp);
     let currentCityName = response.data.name.toUpperCase();
     let currentCityConditions =
-      response.data.weather[0].description.toUpperCase();
+      response.data.weather[0].description.charAt(0).toUpperCase() +
+      str.slice(1);
     let currentCityHumidity = response.data.main.humidity;
     let currentCityWind = Math.round(response.data.wind.speed);
 
