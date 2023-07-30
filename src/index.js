@@ -48,6 +48,8 @@ function showCity(event) {
     let cityTemp = document.querySelector("#display-current-temp");
     cityTemp.innerHTML = `${searchCityTemp}`;
 
+    FahrenheitTemp = Math.round(response.data.main.temp);
+
     document.querySelector("#weather-description").innerHTML =
       response.data.weather[0].description.toUpperCase();
 
@@ -64,28 +66,6 @@ function showCity(event) {
 let citySearch = document.querySelector("#city-search-form");
 citySearch.addEventListener("submit", showCity);
 
-// Celcius Display
-
-//function displayCelsius(event) {
-//event.preventDefault();
-
-//let showCityTempCelsius = document.querySelector("#display-current-temp");
-//showCityTempCelsius.innerHTML = "0";}
-
-//let tempCelsius = document.querySelector("#temp-celsius");
-//tempCelsius.addEventListener("click", displayCelsius);
-
-//Fahrenheit Display
-
-//function displayFahrenheit(event) {
-//event.preventDefault();
-
-//let showCityTempFahrenheit = document.querySelector("#display-current-temp");
-//showCityTempFahrenheit.innerHTML = "0";}
-
-//let tempFahrenheit = document.querySelector("#temp-fahrenheit");
-//tempFahrenheit.addEventListener("click", displayFahrenheit);
-
 //BONUS
 
 function showCurrentCity() {
@@ -96,8 +76,7 @@ function showCurrentCity() {
     let currentCityConditions =
       response.data.weather[0].description.toUpperCase();
     let currentCityHumidity = response.data.main.humidity;
-    let currentCityWind = Math.round(
-      response.data.wind.speed
+    let currentCityWind = Math.round(response.data.wind.speed);
 
     let displayTemp = document.querySelector("#display-current-temp");
     displayTemp.innerHTML = `${currentCityTemp}`;
@@ -111,9 +90,8 @@ function showCurrentCity() {
     let displayCurrentHumidity = document.querySelector("#humidity");
     displayCurrentHumidity.innerHTML = `${currentCityHumidity}`;
 
-    let displayCurrentCityWind = document.querySelector("#wind")
-    displayCurrentCityWind.innerHTML = `${currentCityWind}`
-    );
+    let displayCurrentCityWind = document.querySelector("#wind");
+    displayCurrentCityWind.innerHTML = `${currentCityWind}`;
   }
 
   function showCurrentPostion(position) {
@@ -133,3 +111,29 @@ function showCurrentCity() {
 
 let currentLocation = document.querySelector("#current-city-button");
 currentLocation.addEventListener("click", showCurrentCity);
+
+// Celcius Display
+
+function displayCelsius(event) {
+  event.preventDefault();
+
+  let showCelsiusConvert = ((FahrenheitTemp - 32) * 5) / 9;
+  let showCityTempCelsius = document.querySelector("#display-current-temp");
+  showCityTempCelsius.innerHTML = Math.round(showCelsiusConvert);
+}
+
+let FahrenheitTemp = null;
+
+let tempCelsius = document.querySelector("#temp-celsius");
+tempCelsius.addEventListener("click", displayCelsius);
+
+//Fahrenheit Display
+
+//function displayFahrenheit(event) {
+//event.preventDefault();
+
+//let showCityTempFahrenheit = document.querySelector("#display-current-temp");
+//showCityTempFahrenheit.innerHTML = "0";}
+
+//let tempFahrenheit = document.querySelector("#temp-fahrenheit");
+//tempFahrenheit.addEventListener("click", displayFahrenheit);
