@@ -129,11 +129,12 @@ tempCelsius.addEventListener("click", displayCelsius);
 
 //Fahrenheit Display
 
-//function displayFahrenheit(event) {
-//event.preventDefault();
+function displayFahrenheit(event) {
+  event.preventDefault();
 
-//let showCityTempFahrenheit = document.querySelector("#display-current-temp");
-//showCityTempFahrenheit.innerHTML = "0";}
+  let showCityTempFahrenheit = document.querySelector("#display-current-temp");
+  showCityTempFahrenheit.innerHTML = FahrenheitTemp;
+}
 
-//let tempFahrenheit = document.querySelector("#temp-fahrenheit");
-//tempFahrenheit.addEventListener("click", displayFahrenheit);
+let tempFahrenheit = document.querySelector("#temp-fahrenheit");
+tempFahrenheit.addEventListener("click", displayFahrenheit);
