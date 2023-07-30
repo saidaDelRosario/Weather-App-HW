@@ -32,59 +32,8 @@ presentDateTime.innerHTML = `${day}, ${month} ${date} ${year}, ${hours}:${minute
 
 //Feature 2 Add a search engine, when searching for a city (i.e. Paris), display the city name on the page after the user submits the form.
 
-function showCity(event) {
-  event.preventDefault();
-  let showCityInput = document.querySelector("#city-input");
-  let currentCity = document.querySelector("#city-name");
-  currentCity.innerHTML = showCityInput.value.toUpperCase();
-  console.log(showCityInput.value);
-
-  let city = showCityInput.value;
-  let apiKey = "ec23e2ff6f0483966bf50ed682b76bdd";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-
-  function showCityTemp(response) {
-    let searchCityTemp = Math.round(response.data.main.temp);
-    let cityTemp = document.querySelector("#display-current-temp");
-    cityTemp.innerHTML = `${searchCityTemp}`;
-
-    document.querySelector("#weather-description").innerHTML =
-      response.data.weather[0].description.toUpperCase();
-
-    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-
-    document.querySelector("#wind").innerHTML = Math.round(
-      response.data.wind.speed
-    );
-  }
-
-  axios.get(apiUrl).then(showCityTemp);
-}
-
 let citySearch = document.querySelector("#city-search-form");
 citySearch.addEventListener("submit", showCity);
-
-// Celcius Display
-
-//function displayCelsius(event) {
-//event.preventDefault();
-
-//let showCityTempCelsius = document.querySelector("#display-current-temp");
-//showCityTempCelsius.innerHTML = "0";}
-
-//let tempCelsius = document.querySelector("#temp-celsius");
-//tempCelsius.addEventListener("click", displayCelsius);
-
-//Fahrenheit Display
-
-//function displayFahrenheit(event) {
-//event.preventDefault();
-
-//let showCityTempFahrenheit = document.querySelector("#display-current-temp");
-//showCityTempFahrenheit.innerHTML = "0";}
-
-//let tempFahrenheit = document.querySelector("#temp-fahrenheit");
-//tempFahrenheit.addEventListener("click", displayFahrenheit);
 
 //BONUS
 
@@ -92,12 +41,9 @@ function showCurrentCity() {
   function showCityTemp(response) {
     console.log(response.data.main.temp);
     let currentCityTemp = Math.round(response.data.main.temp);
-
     let currentCityName = response.data.name.toUpperCase();
-
     let currentCityConditions =
       response.data.weather[0].description.toUpperCase();
-
     let displayTemp = document.querySelector("#display-current-temp");
     displayTemp.innerHTML = `${currentCityTemp}`;
 
@@ -110,14 +56,12 @@ function showCurrentCity() {
 
   function showCurrentPostion(position) {
     let lat = position.coords.latitude;
-
     console.log(lat);
     let lon = position.coords.longitude;
-
     console.log(lon);
 
-    let apiKey = "ec23e2ff6f0483966bf50ed682b76bdd";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${ec23e2ff6f0483966bf50ed682b76bdd}&units=imperial`;
+    let apiKey = "4f97a6af475a359f35870845c4249adb";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
     axios.get(apiUrl).then(showCityTemp);
   }
@@ -127,3 +71,24 @@ function showCurrentCity() {
 
 let currentLocation = document.querySelector("#current-city-button");
 currentLocation.addEventListener("click", showCurrentCity);
+
+//Fahrenheit Display
+
+//function displayFahrenheit(event) {event.preventDefault();
+
+//let showCityTempFahrenheit = document.querySelector("#display-current-temp");
+//showCityTempFahrenheit.innerHTML = "0";}
+
+//let tempFahrenheit = document.querySelector("#temp-fahrenheit");
+//tempFahrenheit.addEventListener("click", displayFahrenheit);
+
+// Celcius Display
+
+//function displayCelsius(event) {
+//event.preventDefault();
+
+//let showCityTempCelsius = document.querySelector("#display-current-temp");
+//showCityTempCelsius.innerHTML = "1";}
+
+//let tempCelsius = document.querySelector("#temp-celsius");
+//tempCelsius.addEventListener("click", displayCelsius);
