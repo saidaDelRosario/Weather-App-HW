@@ -103,6 +103,12 @@ function showCurrentCity() {
 
     let displayCityConditions = document.querySelector("#weather-description");
     displayCityConditions.innerHTML = `${currentCityConditions}`;
+
+    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+
+    document.querySelector("#wind").innerHTML = Math.round(
+      response.data.wind.speed
+    );
   }
 
   function showCurrentPostion(position) {
