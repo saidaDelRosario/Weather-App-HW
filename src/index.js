@@ -95,6 +95,10 @@ function showCurrentCity() {
     let currentCityName = response.data.name.toUpperCase();
     let currentCityConditions =
       response.data.weather[0].description.toUpperCase();
+    let currentCityHumidity = response.data.main.humidity;
+    let currentCityWind = Math.round(
+      response.data.wind.speed
+
     let displayTemp = document.querySelector("#display-current-temp");
     displayTemp.innerHTML = `${currentCityTemp}`;
 
@@ -104,10 +108,11 @@ function showCurrentCity() {
     let displayCityConditions = document.querySelector("#weather-description");
     displayCityConditions.innerHTML = `${currentCityConditions}`;
 
-    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+    let displayCurrentHumidity = document.querySelector("#humidity");
+    displayCurrentHumidity.innerHTML = `${currentCityHumidity}`;
 
-    document.querySelector("#wind").innerHTML = Math.round(
-      response.data.wind.speed
+    let displayCurrentCityWind = document.querySelector("#wind")
+    displayCurrentCityWind.innerHTML = `${currentCityWind}`
     );
   }
 
