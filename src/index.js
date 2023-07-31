@@ -1,4 +1,5 @@
-//Feature 1
+//SEARCH CITY WEATHER
+
 let presentDate = new Date();
 
 let months = [
