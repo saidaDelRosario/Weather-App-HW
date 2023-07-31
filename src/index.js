@@ -67,14 +67,46 @@ function showCity(event) {
 let citySearch = document.querySelector("#city-search-form");
 citySearch.addEventListener("submit", showCity);
 
+// Celcius Display
+
+function displayCelsius(event) {
+  event.preventDefault();
+
+  let showCelsiusConvert = ((FahrenheitTemp - 32) * 5) / 9;
+  let showCityTempCelsius = document.querySelector("#display-current-temp");
+  showCityTempCelsius.innerHTML = Math.round(showCelsiusConvert);
+}
+
+let FahrenheitTemp = null;
+
+let tempCelsius = document.querySelector("#temp-celsius");
+tempCelsius.addEventListener("click", displayCelsius);
+
+//Fahrenheit Display
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+
+  let showCityTempFahrenheit = document.querySelector("#display-current-temp");
+  showCityTempFahrenheit.innerHTML = FahrenheitTemp;
+}
+
+let tempFahrenheit = document.querySelector("#temp-fahrenheit");
+tempFahrenheit.addEventListener("click", displayFahrenheit);
+
 //BONUS SHOW CURRENT LOCATION TEMP/WEATHER CONDITIONS
 function showCurrentCity() {
   function showCityTemp(response) {
     console.log(response.data.main.temp);
     let currentCityTemp = Math.round(response.data.main.temp);
+
+    FahrenheitTemp = Math.round(response.data.main.temp);
+
     let currentCityName = response.data.name.toUpperCase();
+
     let currentCityConditions =
       response.data.weather[0].description.toUpperCase();
+
     let displayTemp = document.querySelector("#display-current-temp");
     displayTemp.innerHTML = `${currentCityTemp}`;
 
@@ -102,30 +134,3 @@ function showCurrentCity() {
 
 let currentLocation = document.querySelector("#current-city-button");
 currentLocation.addEventListener("click", showCurrentCity);
-
-// Celcius Display
-
-function displayCelsius(event) {
-  event.preventDefault();
-
-  let showCelsiusConvert = ((FahrenheitTemp - 32) * 5) / 9;
-  let showCityTempCelsius = document.querySelector("#display-current-temp");
-  showCityTempCelsius.innerHTML = Math.round(showCelsiusConvert);
-}
-
-let FahrenheitTemp = null;
-
-let tempCelsius = document.querySelector("#temp-celsius");
-tempCelsius.addEventListener("click", displayCelsius);
-
-//Fahrenheit Display
-
-function displayFahrenheit(event) {
-  event.preventDefault();
-
-  let showCityTempFahrenheit = document.querySelector("#display-current-temp");
-  showCityTempFahrenheit.innerHTML = FahrenheitTemp;
-}
-
-let tempFahrenheit = document.querySelector("#temp-fahrenheit");
-tempFahrenheit.addEventListener("click", displayFahrenheit);
