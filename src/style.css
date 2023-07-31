@@ -37,7 +37,7 @@ ul {
 }
 
 .currentTemp {
-  font-size: 120px;
+  font-size: 135px;
   color: #0dcaf0;
   font-weight: bold;
 }
@@ -46,12 +46,20 @@ ul {
   margin-bottom: 70px;
 }
 .units {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: lighter;
   position: relative;
-  top: -64px;
-  left: -10px;
+  top: -74px;
+  left: -5px;
 }
+
+.weatherIcon {
+  position: relative;
+  left: 160px;
+  top: -120px;
+  width: 50px;
+}
+
 .weekWeather {
   font-size: medium;
 }

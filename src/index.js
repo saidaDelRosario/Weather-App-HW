@@ -40,6 +40,8 @@ function showCity(event) {
   currentCity.innerHTML = showCityInput.value.toUpperCase();
   console.log(showCityInput.value);
 
+  let iconElement = document.querySelector("#icon");
+
   let city = showCityInput.value;
   let apiKey = "ec23e2ff6f0483966bf50ed682b76bdd";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -50,6 +52,11 @@ function showCity(event) {
     cityTemp.innerHTML = `${searchCityTemp}`;
 
     FahrenheitTemp = Math.round(response.data.main.temp);
+
+    iconElement.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 
     document.querySelector("#weather-description").innerHTML =
       response.data.weather[0].description.toUpperCase();
