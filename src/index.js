@@ -51,8 +51,7 @@ function showCity(event) {
     FahrenheitTemp = Math.round(response.data.main.temp);
 
     document.querySelector("#weather-description").innerHTML =
-      response.data.weather[0].description.charAt(0).toUpperCase() +
-      str.slice(1);
+      response.data.weather[0].description.toUpperCase();
 
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 
