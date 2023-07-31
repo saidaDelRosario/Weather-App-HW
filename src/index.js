@@ -67,19 +67,14 @@ function showCity(event) {
 let citySearch = document.querySelector("#city-search-form");
 citySearch.addEventListener("submit", showCity);
 
-//BONUS
-
+//BONUS SHOW CURRENT LOCATION TEMP/WEATHER CONDITIONS
 function showCurrentCity() {
   function showCityTemp(response) {
     console.log(response.data.main.temp);
     let currentCityTemp = Math.round(response.data.main.temp);
     let currentCityName = response.data.name.toUpperCase();
     let currentCityConditions =
-      response.data.weather[0].description.charAt(0).toUpperCase() +
-      str.slice(1);
-    let currentCityHumidity = response.data.main.humidity;
-    let currentCityWind = Math.round(response.data.wind.speed);
-
+      response.data.weather[0].description.toUpperCase();
     let displayTemp = document.querySelector("#display-current-temp");
     displayTemp.innerHTML = `${currentCityTemp}`;
 
@@ -88,12 +83,6 @@ function showCurrentCity() {
 
     let displayCityConditions = document.querySelector("#weather-description");
     displayCityConditions.innerHTML = `${currentCityConditions}`;
-
-    let displayCurrentHumidity = document.querySelector("#humidity");
-    displayCurrentHumidity.innerHTML = `${currentCityHumidity}`;
-
-    let displayCurrentCityWind = document.querySelector("#wind");
-    displayCurrentCityWind.innerHTML = `${currentCityWind}`;
   }
 
   function showCurrentPostion(position) {
