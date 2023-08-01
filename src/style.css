@@ -6,13 +6,13 @@ body {
 h1 {
   position: relative;
   left: 250px;
-  top: -30px;
+  top: -16px;
 }
 
 h2 {
   position: relative;
   left: 690px;
-  top: -265px;
+  top: -240px;
 }
 
 ul {
@@ -21,9 +21,8 @@ ul {
 
 .citySearch {
   position: relative;
-  left: 250px;
-  top: 30px;
-  margin-top: 35px;
+  left: 350px;
+  top: 20px;
   text-align: center;
 }
 
@@ -33,7 +32,7 @@ ul {
 }
 
 .cityName {
-  font-size: 70px;
+  font-size: 50px;
   color: #0dcaf0;
 }
 
@@ -80,7 +79,7 @@ ul {
 
 .fri {
   margin-left: 265px;
-  margin-top: -300px;
+  margin-top: -260px;
 }
 
 .sat {
@@ -115,7 +114,7 @@ ul {
   width: 155px;
   height: 35px;
   border: 0;
-  margin-left: 368px;
+  margin-left: 374px;
   top: -35px;
 }
 

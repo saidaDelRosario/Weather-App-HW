@@ -101,7 +101,7 @@ function displayFahrenheit(event) {
 let tempFahrenheit = document.querySelector("#temp-fahrenheit");
 tempFahrenheit.addEventListener("click", displayFahrenheit);
 
-//BONUS SHOW CURRENT LOCATION TEMP/WEATHER CONDITIONS
+//SHOW CURRENT LOCATION TEMP/WEATHER CONDITIONS ON PAGE LOAD
 let body = document.querySelector("body");
 
 function showCurrentCity() {
