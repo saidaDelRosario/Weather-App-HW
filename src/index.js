@@ -102,6 +102,8 @@ let tempFahrenheit = document.querySelector("#temp-fahrenheit");
 tempFahrenheit.addEventListener("click", displayFahrenheit);
 
 //BONUS SHOW CURRENT LOCATION TEMP/WEATHER CONDITIONS
+let body = document.querySelector("body");
+
 function showCurrentCity() {
   function showCityTemp(response) {
     console.log(response.data.main.temp);
@@ -139,5 +141,6 @@ function showCurrentCity() {
   navigator.geolocation.getCurrentPosition(showCurrentPostion);
 }
 
-let currentLocation = document.querySelector("#current-city-button");
-currentLocation.addEventListener("click", showCurrentCity);
+//let currentLocation = document.querySelector("#current-city-button");
+//currentLocation.addEventListener("click", showCurrentCity);
+body.onload = showCurrentCity;
