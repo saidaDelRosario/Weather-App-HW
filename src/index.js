@@ -106,6 +106,7 @@ function displayCelsius(event) {
 }
 
 let FahrenheitTemp = null;
+displayForecast();
 
 let tempCelsius = document.querySelector("#temp-celsius");
 tempCelsius.addEventListener("click", displayCelsius);
@@ -167,8 +168,6 @@ function showCurrentCity() {
 
   navigator.geolocation.getCurrentPosition(showCurrentPostion);
 }
-
-displayForecast();
 
 //let currentLocation = document.querySelector("#current-city-button");
 //currentLocation.addEventListener("click", showCurrentCity);
