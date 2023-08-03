@@ -31,6 +31,27 @@ console.log(presentDate.getMinutes());
 let presentDateTime = document.querySelector("#today-date");
 presentDateTime.innerHTML = `${day}, ${month} ${date} ${year}, ${hours}:${minutes}`;
 
+//Forecast display
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `<div class="row">
+        <div class="col-2">
+          <div class="card" style="width: 7rem">
+            <img
+              src="images/cloudSun.jpg"
+              class="card-img-top"
+              alt="cloudSun" />
+            <div class="card-body">
+              <h5 class="card-title text-center">SAT</h5>
+              <p class="card-text text-center">
+                <span class="max-temp">98°</span
+                ><span class="min-temp"> 77° </span>
+              </p>
+            </div>
+          </div>
+       </div>`;
+}
+
 //Feature 2 Add a search engine, when searching for a city (i.e. Paris), display the city name on the page after the user submits the form.
 
 function showCity(event) {
@@ -146,6 +167,8 @@ function showCurrentCity() {
 
   navigator.geolocation.getCurrentPosition(showCurrentPostion);
 }
+
+displayForecast();
 
 //let currentLocation = document.querySelector("#current-city-button");
 //currentLocation.addEventListener("click", showCurrentCity);
