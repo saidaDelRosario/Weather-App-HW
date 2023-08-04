@@ -78,33 +78,8 @@ ul {
 }
 
 .weatherForecast {
-  margin-left: 265px;
-  margin-top: -290px;
-}
-
-.sat {
-  margin-left: 120px;
-  margin-top: -200px;
-}
-
-.sun {
-  margin-left: 240px;
-  margin-top: -200px;
-}
-
-.mon {
-  margin-left: 360px;
-  margin-top: -200px;
-}
-
-.tue {
-  margin-left: 480px;
-  margin-top: -200px;
-}
-
-.wed {
-  margin-left: 600px;
-  margin-top: -200px;
+  margin-left: 140px;
+  margin-top: -270px;
 }
 
 .searchButton {
