@@ -39,7 +39,7 @@ ul {
 }
 
 .cityWeatherCondition {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .currentWeather {
@@ -124,6 +124,6 @@ a {
 
 .weatherForecast {
   position: relative;
-  top: -160px;
+  top: -197px;
   left: 10px;
 }
