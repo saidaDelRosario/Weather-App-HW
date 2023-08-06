@@ -35,7 +35,7 @@ function showCurrentCity() {
     let lon = position.coords.longitude;
     console.log(lon);
 
-    let apiKey = "4f97a6af475a359f35870845c4249adb";
+    let apiKey = "866a208a73eeff02182218e9441647a1";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
     axios.get(apiUrl).then(showCityTemp);
@@ -118,10 +118,13 @@ function showCity(event) {
   let iconElement = document.querySelector("#icon");
 
   let city = showCityInput.value;
-  let apiKey = "ec23e2ff6f0483966bf50ed682b76bdd";
+
+  let apiKey = "866a208a73eeff02182218e9441647a1";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
   function showCityTemp(response) {
+    console.log(response.data.coord);
+
     let searchCityTemp = Math.round(response.data.main.temp);
     let cityTemp = document.querySelector("#display-current-temp");
     cityTemp.innerHTML = `${searchCityTemp}`;
@@ -160,7 +163,6 @@ function displayCelsius(event) {
 }
 
 let FahrenheitTemp = null;
-displayForecast();
 
 let tempCelsius = document.querySelector("#temp-celsius");
 tempCelsius.addEventListener("click", displayCelsius);
@@ -179,11 +181,13 @@ tempFahrenheit.addEventListener("click", displayFahrenheit);
 
 //let currentLocation = document.querySelector("#current-city-button");
 //currentLocation.addEventListener("click", showCurrentCity);
+displayForecast();
+
 body.onload = showCurrentCity;
 
 //Forecast
-//function getForecast(coordiates) {
-//console.log(coordiates);
+//function getForecast(coordinates) {
+//console.log(coordinates);
 
 //let apiKey = "c86a96e0f8cecbd4218d761223d4a849";
-//let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordiates.lat}&lon=${coordiates.lon}&appid=${apiKey}&units=imperial`;}
+//let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;}
