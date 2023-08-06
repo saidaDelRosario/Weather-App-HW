@@ -86,8 +86,8 @@ function displayForecast() {
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `<div class="col-2">
-          <div class="card" style="width: 7rem">
+      `<div class="col">
+          <div class="card">
             <img
               src="images/cloudSun.jpg"
               class="card-img-top"
@@ -102,7 +102,6 @@ function displayForecast() {
           </div>
        </div>`;
   });
-
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
