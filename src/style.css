@@ -61,8 +61,6 @@ ul {
     rgb(181, 239, 249) 10.5%,
     rgb(254, 254, 254) 86.8%
   );
-
-  padding-bottom: 110px;
 }
 
 .forecast-icon {
@@ -125,6 +123,6 @@ a {
 
 .weatherForecast {
   position: relative;
-  top: -197px;
+  top: -195px;
   left: 10px;
 }

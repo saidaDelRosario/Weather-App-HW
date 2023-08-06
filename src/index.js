@@ -180,3 +180,10 @@ tempFahrenheit.addEventListener("click", displayFahrenheit);
 //let currentLocation = document.querySelector("#current-city-button");
 //currentLocation.addEventListener("click", showCurrentCity);
 body.onload = showCurrentCity;
+
+//Forecast
+//function getForecast(coordiates) {
+//console.log(coordiates);
+
+//let apiKey = "c86a96e0f8cecbd4218d761223d4a849";
+//let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordiates.lat}&lon=${coordiates.lon}&appid=${apiKey}&units=imperial`;}
