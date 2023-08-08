@@ -71,7 +71,7 @@ function displayForecast(response) {
               src="https://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
               }@2x.png"
-              alt="forecastIcons" width="50"/>
+              alt="forecastIcons" width="50" class="card-img-top"/>
             <div class="card-body">
               <h5 class="card-title text-center">${formatDay(
                 forecastDay.dt
