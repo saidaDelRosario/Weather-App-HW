@@ -110,6 +110,15 @@ a {
 
 .min-temp {
   opacity: 0.6;
+  font-size: 15px;
+}
+
+.max-temp {
+  font-size: 15px;
+}
+
+.card-title {
+  font-size: 15px;
 }
 
 .conditions-description {
