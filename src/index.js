@@ -71,7 +71,8 @@ function displayForecast(response) {
               src="https://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
               }@2x.png"
-              alt="forecastIcons" width="50" class="card-img-top"/>
+              alt="forecastIcons" width="50" class="card-img-top"
+              />
             <div class="card-body">
               <h5 class="card-title text-center">${formatDay(
                 forecastDay.dt
@@ -138,30 +139,28 @@ citySearch.addEventListener("submit", showCity);
 
 // Celcius Display
 
-function displayCelsius(event) {
-  event.preventDefault();
+//function displayCelsius(event) {
+//event.preventDefault();
 
-  let showCelsiusConvert = ((FahrenheitTemp - 32) * 5) / 9;
-  let showCityTempCelsius = document.querySelector("#display-current-temp");
-  showCityTempCelsius.innerHTML = Math.round(showCelsiusConvert);
-}
+//let showCelsiusConvert = ((FahrenheitTemp - 32) * 5) / 9;
+//let showCityTempCelsius = document.querySelector("#display-current-temp");
+//showCityTempCelsius.innerHTML = Math.round(showCelsiusConvert);}
 
-let FahrenheitTemp = null;
+//let FahrenheitTemp = null;
 
-let tempCelsius = document.querySelector("#temp-celsius");
-tempCelsius.addEventListener("click", displayCelsius);
+//let tempCelsius = document.querySelector("#temp-celsius");
+//tempCelsius.addEventListener("click", displayCelsius);
 
 //Fahrenheit Display
 
-function displayFahrenheit(event) {
-  event.preventDefault();
+//function displayFahrenheit(event) {
+//event.preventDefault();
 
-  let showCityTempFahrenheit = document.querySelector("#display-current-temp");
-  showCityTempFahrenheit.innerHTML = FahrenheitTemp;
-}
+//let showCityTempFahrenheit = document.querySelector("#display-current-temp");
+//showCityTempFahrenheit.innerHTML = FahrenheitTemp;}
 
-let tempFahrenheit = document.querySelector("#temp-fahrenheit");
-tempFahrenheit.addEventListener("click", displayFahrenheit);
+//let tempFahrenheit = document.querySelector("#temp-fahrenheit");
+//tempFahrenheit.addEventListener("click", displayFahrenheit);
 
 //let currentLocation = document.querySelector("#current-city-button");
 //currentLocation.addEventListener("click", showCurrentCity);

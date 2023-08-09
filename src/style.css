@@ -25,7 +25,7 @@ ul {
   font-size: 80px;
   color: #0dcaf0;
   font-weight: bold;
-  margin-left: 320px;
+  margin-left: 370px;
   position: relative;
   top: -190px;
 }
@@ -33,9 +33,9 @@ ul {
 .units {
   font-size: 25px;
   font-weight: lighter;
-
+  color: #0dcaf0;
   position: relative;
-  top: -225px;
+  top: -228px;
 }
 
 .cityWeatherCondition {
@@ -92,15 +92,6 @@ ul {
   height: 35px;
   border: 0;
 }
-a:focus {
-  text-decoration: none;
-  font-weight: border;
-  color: #0dcaf0;
-}
-
-a {
-  color: black;
-}
 
 .open-source-code {
   position: relative;
@@ -120,7 +111,6 @@ a {
 .card-title {
   font-size: 15px;
 }
-
 
 .conditions-description {
   opacity: 0.6;
