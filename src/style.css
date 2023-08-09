@@ -21,7 +21,7 @@ ul {
 }
 
 .cityName {
-  font-size: 40px;
+  font-size: 30px;
   color: #0dcaf0;
 }
 
@@ -43,7 +43,7 @@ ul {
 }
 
 .cityWeatherCondition {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .currentWeather {
