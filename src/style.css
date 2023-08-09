@@ -7,6 +7,10 @@ ul {
   list-style: none;
 }
 
+.card-title {
+  font-size: 16px;
+}
+
 .citySearch {
   margin-top: 35px;
 }
@@ -25,7 +29,7 @@ ul {
   font-size: 80px;
   color: #0dcaf0;
   font-weight: bold;
-  margin-left: 370px;
+  margin-left: 270px;
   position: relative;
   top: -190px;
 }
@@ -52,9 +56,6 @@ ul {
   top: -240px;
 }
 
-.weekWeather {
-  font-size: medium;
-}
 .pageBackground {
   background: linear-gradient(
     181.2deg,
@@ -64,7 +65,7 @@ ul {
 }
 
 .forecast-icon {
-  width: 140px;
+  width: 40px;
 }
 
 .searchButton {
@@ -73,17 +74,6 @@ ul {
   width: 155px;
   height: 35px;
   border: 0;
-}
-
-.currentCityButton {
-  background-color: #0dcaf0;
-  border-radius: 10px;
-  width: 155px;
-  height: 35px;
-  border: 0;
-  position: relative;
-  left: 800px;
-  top: -40px;
 }
 
 .cityInput {
@@ -101,15 +91,11 @@ ul {
 
 .min-temp {
   opacity: 0.6;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .max-temp {
-  font-size: 15px;
-}
-
-.card-title {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .conditions-description {
