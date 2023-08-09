@@ -90,7 +90,7 @@ ul {
   border-radius: 10px;
   width: 355px;
   height: 35px;
-  border: 0;
+  outline: none;
 }
 
 .open-source-code {
